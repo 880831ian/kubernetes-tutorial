@@ -5,7 +5,7 @@
 使用的方法也很簡單且方便，使用 `kubectl port-forward <pod> <external-port>:<pod-port>`，我們拿 [Kubernetes 基本篇](https://pin-yi.me/k8s)最後的範例，來做說明：
 
 ```sh
-kubectl port-forward kubernetes-demo-pod 3000:3000
+$ kubectl port-forward kubernetes-demo-pod 3000:3000
 
 Forwarding from 127.0.0.1:3000 -> 3000
 Forwarding from [::1]:3000 -> 3000
@@ -50,7 +50,7 @@ Handling connection for 3000
 
 <br>
 
-### 實作
+### LoadBalancer 實作
 
 那我們來用 Service (LoadBalancer) 改寫[基本篇](https://pin-yi.me/k8s)的連線問題 ：([文章連結](https://pin-yi.me/k8s-advanced/#%E4%BB%80%E9%BA%BC%E6%98%AF-service-))
 
@@ -66,8 +66,8 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 3000 # 外部訪問 Port
-      targetPort: 3000 # Pod內部 Port
+      port: 3000
+      targetPort: 3000
   selector:
     app: demo
 ```
@@ -81,8 +81,8 @@ spec
 
 * type：指定此 Service 要使用的方法，這邊我們使用 LoadBalancer。
 * ports.protocol：此為連線的網路協議，預設值為 `TCP`，當然也可以使用 `UDP`。
-* ports.protocol.port：此為外部訪問的 Port。
-* ports.protocol.targetPort：此為 Pod 內部訪問的 Port。
+* ports.port：此為建立好的 Service 要以哪個 Port 連接到 Pod 上。
+* ports.targetPort：此為目標 Pod 的 Port ，通常 port 跟 targetPort 一樣。
 * selector.app：如果要使 Service 連接到正確的 Pod 就必須利用 `selector`，只要原封不動的把 Pod 的 `Labels` 複製上去即可。
 
 <br>
@@ -90,7 +90,7 @@ spec
 接下來使用 `kubectl apply` 建立 service：
 
 ```sh
-kubectl apply -f service.yaml
+$ kubectl apply -f service.yaml
 ```
 
 <br>
@@ -108,7 +108,7 @@ kubectl apply -f service.yaml
 <br>
 
 ```sh
-minikube tunnel
+$ minikube tunnel
 
 ✅  Tunnel successfully started
 
