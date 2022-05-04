@@ -157,7 +157,7 @@ kubernetes-demo-ingress   nginx   *       192.168.64.11   80      5m56s
 
 * `test.tw`
 
-![圖片](https://raw.githubusercontent.com/880831ian/kubernetes-tutorial/master/images/ingress.png)
+![圖片](https://raw.githubusercontent.com/880831ian/kubernetes-tutorial/master/images/Shiba-Inu-3.png)
 
 <br>
 
