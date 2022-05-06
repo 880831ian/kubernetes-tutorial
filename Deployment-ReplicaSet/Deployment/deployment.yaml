@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 60
+  revisionHistoryLimit: 10
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name: kubernetes-demo-container
+          image: 880831ian/kubernetes-demo
+          ports:
+            - containerPort: 3000
+  selector:
+    matchLabels:
+      app: demo

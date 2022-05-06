@@ -10,7 +10,6 @@ Ingress 可以幫助我們統一對外的 port number，並根據 hostname 或�
 
 <br>
 
-{{< image src="/images/K8s-advanced/describe-service.png"  width="800" caption="Service 圖片來源：[[Day 19] 在 Kubernetes 中實現負載平衡 - Ingress Controller](https://ithelp.ithome.com.tw/articles/10196261)" src_s="/images/K8s-advanced/describe-service.png" src_l="/images/K8s-advanced/describe-service.png" >}}
 
 ![圖片](https://raw.githubusercontent.com/880831ian/kubernetes-tutorial/master/images/describe-service.png)
 
@@ -19,8 +18,6 @@ Ingress 可以幫助我們統一對外的 port number，並根據 hostname 或�
 <br>
 
 若是使用 Ingress，我們只需要開放一個對外的 port numer，Ingree 可以在設定檔中設定不同的路徑，決定要將使用者的請求傳送到哪一個 Service 物件上：
-
-{{< image src="/images/K8s-advanced/describe-ingress.png"  width="900" caption="Ingress 圖片來源：[[Day 19] 在 Kubernetes 中實現負載平衡 - Ingress Controller](https://ithelp.ithome.com.tw/articles/10196261)" src_s="/images/K8s-advanced/describe-ingress.png" src_l="/images/K8s-advanced/describe-ingress.png" >}}
 
 ![圖片](https://raw.githubusercontent.com/880831ian/kubernetes-tutorial/master/images/describe-ingress.png)
 
@@ -54,7 +51,6 @@ SSL 全名是傳輸層安全性協定，而網站通常都會利用 https 進行
 
 <br>
 
-{{< image src="/images/K8s-advanced/ingress.png"  width="900" caption="Ingress 圖片來源：[[Day 19] 在 Kubernetes 中實現負載平衡 - Ingress Controller](https://ithelp.ithome.com.tw/articles/10196261)" src_s="/images/K8s-advanced/ingress.png" src_l="/images/K8s-advanced/ingress.png" >}}
 
 ![圖片](https://raw.githubusercontent.com/880831ian/kubernetes-tutorial/master/images/ingress.png)
 
