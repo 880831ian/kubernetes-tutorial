@@ -18,7 +18,7 @@ Stateful 就是 Stateless 的相反，也就是每次的 Request 都會被記錄
 
 <br>
 
-{{< image src="/images/K8s-advanced/stateless_ful.png"  width="700" caption="Stateless vs Stateful" src_s="/images/K8s-advanced/stateless_ful.png" src_l="/images/K8s-advanced/stateless_ful.png" >}}
+![圖片](https://raw.githubusercontent.com/880831ian/kubernetes-tutorial/master/images/stateless_ful.png)
 
 <br>
 
