@@ -17,3 +17,6 @@
 ## ReplicationController [連結](https://github.com/880831ian/kubernetes-tutorial/tree/master/ReplicationController)
 
 ## Deployment-ReplicaSet [連結](https://github.com/880831ian/kubernetes-tutorial/tree/master/Deployment-ReplicaSet)
+
+## StatefulSet [連結](https://github.com/880831ian/kubernetes-tutorial/tree/master/StatefulSet)
+
